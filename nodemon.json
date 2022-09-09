@@ -1,0 +1,8 @@
+{
+  "env": {
+    "DB_USER": "omarnero",
+    "DB_PASSWORD": "56831307$yr",
+    "DB_NAME": "products-test",
+    "JWT_KEY": "totamylove"
+  }
+}
