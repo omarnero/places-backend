@@ -59,7 +59,6 @@ const createPlace = async (req, res, next) => {
     image: req.file.path,
     creator,
   });
-  console.log(userPlace);
   let user;
   try {
     user = await User.findById(creator);
@@ -157,9 +156,7 @@ const deletePlace = async (req, res, next) => {
     );
     next(error);
   }
-  fs.unlink(imagePath, (err) => {
-    console.log(err);
-  });
+  fs.unlink(imagePath, (err) => {});
   res.status(200).json({ message: "the place delete correctly" });
 };
 exports.getPlaceById = getPlaceById;
